@@ -26,11 +26,13 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					glow: 'hsl(var(--secondary-glow))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -42,7 +44,8 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+					glow: 'hsl(var(--accent-glow))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -61,7 +64,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Solar system planet colors
+				sun: 'hsl(var(--sun))',
+				mercury: 'hsl(var(--mercury))',
+				venus: 'hsl(var(--venus))',
+				earth: 'hsl(var(--earth))',
+				mars: 'hsl(var(--mars))',
+				jupiter: 'hsl(var(--jupiter))',
+				saturn: 'hsl(var(--saturn))',
+				uranus: 'hsl(var(--uranus))',
+				neptune: 'hsl(var(--neptune))'
+			},
+			backgroundImage: {
+				'cosmic': 'var(--gradient-cosmic)',
+				'nebula': 'var(--gradient-nebula)',
+				'stellar': 'var(--gradient-stellar)'
+			},
+			boxShadow: {
+				'cosmic': 'var(--shadow-cosmic)',
+				'stellar': 'var(--shadow-stellar)',
+				'nebula': 'var(--shadow-nebula)'
+			},
+			transitionTimingFunction: {
+				'cosmic': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'stellar': 'cubic-bezier(0.25, 0.8, 0.25, 1)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +111,37 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px hsl(var(--primary) / 0.3), 0 0 60px hsl(var(--primary) / 0.1)',
+						opacity: '1'
+					},
+					'50%': { 
+						boxShadow: '0 0 40px hsl(var(--primary) / 0.5), 0 0 80px hsl(var(--primary) / 0.3)',
+						opacity: '0.8'
+					}
+				},
+				'stellar-rotate': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'twinkle': {
+					'0%, 100%': { opacity: '0.3' },
+					'50%': { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'stellar-rotate': 'stellar-rotate 20s linear infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'twinkle': 'twinkle 2s ease-in-out infinite'
 			}
 		}
 	},
