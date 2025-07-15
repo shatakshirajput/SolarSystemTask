@@ -86,9 +86,11 @@ export default {
 				'stellar': 'var(--shadow-stellar)',
 				'nebula': 'var(--shadow-nebula)'
 			},
-			transitionTimingFunction: {
-				'cosmic': 'cubic-bezier(0.4, 0, 0.2, 1)',
-				'stellar': 'cubic-bezier(0.25, 0.8, 0.25, 1)'
+			fontFamily: {
+				sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+				mono: ['Orbitron', 'ui-monospace', 'monospace'],
+				orbitron: ['Orbitron', 'monospace'],
+				space: ['Space Grotesk', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
