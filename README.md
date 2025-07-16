@@ -138,3 +138,8 @@ cd SolarSystemThreeJS
 npm install
 npm run dev
 Visit: http://localhost:5173
+```
+## 🌐 Live Demo
+
+Check out the deployed project here: [Solar System Task](https://solar-system-task.vercel.app/)
+
